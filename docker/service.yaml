@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftWebConsole
+  creationTimestamp: '2020-02-05T19:08:34Z'
+  labels:
+    app: webjdk82
+  name: webjdk82
+  namespace: my-project
+  resourceVersion: '284102'
+  selfLink: /api/v1/namespaces/my-project/services/webjdk82
+  uid: e7b6a061-484a-11ea-8f77-080027c73023
+spec:
+  clusterIP: 172.30.154.111
+  ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    deploymentconfig: webjdk82
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

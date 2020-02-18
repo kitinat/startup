@@ -1,4 +1,4 @@
-package com.mfec.application.response;
+package com.mfec.ksme.modulename.model.response;
 
 import java.util.Date;
 

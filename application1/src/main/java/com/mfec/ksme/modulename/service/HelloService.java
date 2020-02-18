@@ -1,4 +1,4 @@
-package com.mfec.application.service;
+package com.mfec.ksme.modulename.service;
 
 import java.util.Optional;
 
@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.mfec.application.model.HelloEntity;
-import com.mfec.application.model.HelloRequest;
-import com.mfec.application.repository.HelloRepository;
+import com.mfec.ksme.modulename.entity.HelloEntity;
+import com.mfec.ksme.modulename.model.request.HelloRequest;
+import com.mfec.ksme.modulename.repository.HelloRepository;
 
 @Service
-@Transactional
+
 public class HelloService {
     
 	@Autowired
@@ -21,12 +21,12 @@ public class HelloService {
 		Optional<HelloEntity> option = repo.findById(id);
 		return option.get();
 	}
-	
+	@Transactional
 	public HelloEntity create(HelloRequest input) {
 		HelloEntity entity = new HelloEntity(input.getName(),input.getMessage());
 		return repo.save(entity);
 	}
-	
+	@Transactional
 	public HelloEntity save(HelloRequest input) {
 		HelloEntity entity = new HelloEntity(input.getId(),input.getName(),input.getMessage());
 		return repo.save(entity);

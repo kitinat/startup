@@ -1,4 +1,4 @@
-package com.mfec.application;
+package com.mfec.ksme.modulename.config;
 
 import java.io.IOException;
 import java.util.Date;
@@ -8,9 +8,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -26,15 +24,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     
-	@Autowired
-	private Environment env;
 	
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 
 		httpSecurity.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 				.authorizeRequests().anyRequest().authenticated().and().httpBasic();
-
 		httpSecurity.exceptionHandling().authenticationEntryPoint(new BasicAuthenticationEntryPoint() {
 			private ObjectMapper objectMapper = new ObjectMapper();
 

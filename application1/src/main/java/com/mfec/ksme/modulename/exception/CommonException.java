@@ -1,4 +1,4 @@
-package com.mfec.application.exception;
+package com.mfec.ksme.modulename.exception;
 
 import java.util.Date;
 

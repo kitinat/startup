@@ -1,4 +1,4 @@
-package com.mfec.application.controller;
+package com.mfec.ksme.modulename.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mfec.application.exception.BusinessException;
-import com.mfec.application.exception.CommonException;
-import com.mfec.application.model.HelloEntity;
-import com.mfec.application.model.HelloRequest;
-import com.mfec.application.service.HelloService;
+import com.mfec.ksme.modulename.entity.HelloEntity;
+import com.mfec.ksme.modulename.exception.BusinessException;
+import com.mfec.ksme.modulename.exception.CommonException;
+import com.mfec.ksme.modulename.model.request.HelloRequest;
+import com.mfec.ksme.modulename.service.HelloService;
 
 import lombok.extern.slf4j.Slf4j;
 

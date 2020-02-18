@@ -1,8 +1,10 @@
-package com.mfec.application.model;
+package com.mfec.ksme.modulename.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import com.mfec.ksme.modulename.model.BaseModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

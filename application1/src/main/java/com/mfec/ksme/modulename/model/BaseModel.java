@@ -1,4 +1,4 @@
-package com.mfec.application.model;
+package com.mfec.ksme.modulename.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

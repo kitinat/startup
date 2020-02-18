@@ -1,13 +1,13 @@
-package com.mfec.application.exception.handler;
+package com.mfec.ksme.modulename.controller.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.mfec.application.exception.BusinessException;
-import com.mfec.application.exception.CommonException;
-import com.mfec.application.response.ErrorResponse;
+import com.mfec.ksme.modulename.exception.BusinessException;
+import com.mfec.ksme.modulename.exception.CommonException;
+import com.mfec.ksme.modulename.model.response.ErrorResponse;
 
 @ControllerAdvice
 public class ApplicationExceptionHandler {

@@ -1,4 +1,4 @@
-package com.mfec.application;
+package com.mfec.ksme.modulename.config;
 
 import java.util.Arrays;
 
